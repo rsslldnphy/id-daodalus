@@ -1,0 +1,9 @@
+test:
+  default:
+    host: localhost
+    database: daodalus
+    pool_size: 5
+    timeout: 5
+    replicate_set_name: daodalus_test
+    servers:
+     - { host: localhost, port: 27017 }

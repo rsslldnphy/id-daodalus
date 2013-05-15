@@ -12,3 +12,5 @@ RSpec.configure do |config|
   config.order = :rand
   config.color_enabled = true
 end
+
+Daodalus::Configuration.load('spec/support/daodalus.yml', :test)

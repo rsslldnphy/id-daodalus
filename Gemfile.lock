@@ -1,3 +1,23 @@
+GIT
+  remote: git@github.com:onthebeach/daodalus.git
+  revision: e36c83168a0256293eaff24eb81206241259a00f
+  branch: master
+  specs:
+    daodalus (0.0.3)
+      bson_ext (~> 1.8.0)
+      mongo (~> 1.8.0)
+      wendy
+
+GIT
+  remote: git@github.com:onthebeach/id.git
+  revision: 1ae220c068f9be88fc5e485c745b7604d8d2c6e2
+  branch: master
+  specs:
+    id (0.0.8)
+      activesupport
+      money
+      optional
+
 PATH
   remote: .
   specs:
@@ -14,16 +34,8 @@ GEM
     bson (1.8.5)
     bson_ext (1.8.5)
       bson (~> 1.8.5)
-    daodalus (0.0.3)
-      bson_ext (~> 1.8.0)
-      mongo (~> 1.8.0)
-      wendy
     diff-lcs (1.2.4)
     i18n (0.6.4)
-    id (0.0.8)
-      activesupport
-      money
-      optional
     json (1.7.7)
     money (5.1.1)
       i18n (~> 0.6.0)
@@ -49,6 +61,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  daodalus!
+  id!
   id-daodalus!
   json (~> 1.7.7)
   rspec
