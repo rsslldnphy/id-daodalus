@@ -4,9 +4,7 @@ SimpleCov.start do
 end
 
 require 'rspec'
-require 'id'
-require 'daodalus'
-require 'id_daodalus'
+require 'id-daodalus'
 
 RSpec.configure do |config|
   config.order = :rand
