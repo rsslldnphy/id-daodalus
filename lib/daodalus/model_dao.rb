@@ -16,20 +16,22 @@ module Daodalus
 
     module ClassDAO
 
-      def dao
-        @dao ||= create_dao
-      end
+      attr_accessor :dao
 
       def remove_all
         dao.remove_all
       end
 
+      def self.extended(base)
+        base.dao = create_dao(base)
+      end
+
       private
 
-      def create_dao
+      def self.create_dao(base)
         Class.new do
           extend ::Daodalus::DAO
-          target :default, self.class.name
+          target :default, base.name.underscore.pluralize
 
           def self.save(data)
             super
